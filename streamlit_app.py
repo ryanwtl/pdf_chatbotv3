@@ -117,7 +117,7 @@ def display_pdf(uploaded_file):
     pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe>'
     
     # Display file
-    st.markdown(pdf_display, unsafe_allow_html=True)
+    st.components.v1.html(pdf_display, unsafe_allow_html=True)
 
 def split_document(documents, chunk_size, chunk_overlap):    
     """
